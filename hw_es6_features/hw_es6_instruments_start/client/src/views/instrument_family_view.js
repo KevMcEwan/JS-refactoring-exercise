@@ -13,9 +13,10 @@ class InstrumentFamilyView{
     });
   };
 
-  render(family) {
-
-    const { name, description, instruments } = family;
+  render({ name, description, instruments }) {
+  // render(family) {
+    //destructuring example
+    // const { name, description, instruments } = family;
 
     this.container.innerHTML = '';
 
@@ -23,6 +24,7 @@ class InstrumentFamilyView{
     this.container.appendChild(familyName);
 
     const familyDescription = this.createElement('p',description);
+    //original: const familyDescription = this.createElement('p',family.description);
     this.container.appendChild(familyDescription);
 
     const instrumentListTitle = this.createElement('h3', 'Instruments include:');
